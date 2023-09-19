@@ -24,12 +24,12 @@
 import './commands';
 import 'cypress-real-events/support';
 import registerCypressGrep from '@cypress/grep';
-
+registerCypressGrep();
 before(() => {
   cy.task('esArchiverLoad', { archiveName: 'auditbeat' });
 });
 
-registerCypressGrep();
+
 
 Cypress.on('uncaught:exception', () => {
   return false;
