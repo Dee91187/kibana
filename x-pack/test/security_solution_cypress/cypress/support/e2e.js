@@ -29,8 +29,6 @@ before(() => {
   cy.task('esArchiverLoad', { archiveName: 'auditbeat' });
 });
 
-
-
 Cypress.on('uncaught:exception', () => {
   return false;
 });
